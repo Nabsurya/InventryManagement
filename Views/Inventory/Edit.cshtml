@@ -1,0 +1,24 @@
+﻿@model InventoryItem
+
+@{
+    ViewData["Title"] = "Edit Inventory";
+}
+
+<h2>Edit Inventory Item</h2>
+
+<form asp-action="Edit" method="post">
+    <input type="hidden" asp-for="Id" /> <!-- needed for updating -->
+
+    <div class="form-group">
+        <label>Name</label>
+        <input asp-for="Name" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <label>Quantity</label>
+        <input asp-for="Quantity" class="form-control" />
+    </div>
+
+    <button type="submit" class="btn btn-primary mt-2">Update</button>
+    <a asp-action="Index" class="btn btn-secondary mt-2">Cancel</a>
+</form>
